@@ -51,7 +51,7 @@
 
         href="https://github.com/jonathantneal/svg4everybody#readme"
 
-    >svg4everybody (v2.1.7)</a>
+    >svg4everybody (v2.1.8)</a>
 </h1>
 <h4>Use external SVG spritemaps in any browser</h4>
 <div class="apidocSectionDiv"><a
@@ -66,15 +66,6 @@
             <a class="apidocElementLiA" href="#apidoc.element.svg4everybody.svg4everybody">
             function <span class="apidocSignatureSpan"></span>svg4everybody
             <span class="apidocSignatureSpan">(rawopts)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.svg4everybody.toString">
-            function <span class="apidocSignatureSpan">svg4everybody.</span>toString
-            <span class="apidocSignatureSpan">()</span>
             </a>
 
         </li>
@@ -103,6 +94,7 @@
             var use = uses[index], parent = use.parentNode, svg = getSVGAncestor(parent);
             if (svg) {
                 var src = use.getAttribute(&#x22;xlink:href&#x22;) || use.getAttribute(&#x22;href&#x22;);
+                !src &#x26;&#x26; opts.attributeName &#x26;&#x26; (src = use.getAttribute(opts.attributeName));
                 if (polyfill) {
                     if (!opts.validate || opts.validate(src, svg, use)) {
                         // remove the &#x3c;use&#x3e; element
@@ -147,21 +139,6 @@
 use&#x22;), numberOfSvgUseElementsToBypass = 0;
     // conditionally start the interval if the polyfill is active
     polyfill &#x26;&#x26; oninterval();
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.svg4everybody.toString" id="apidoc.element.svg4everybody.toString">
-        function <span class="apidocSignatureSpan">svg4everybody.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
